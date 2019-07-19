@@ -1,0 +1,99 @@
+/*
+=========================
+common
+=========================
+*/
+.fas{
+	text-rendering: optimizeLegibility;
+}
+/*
+=========================
+HEADER
+=========================
+*/
+
+nav{
+	    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+		height:100px !important;
+}
+#mobile-logo{
+	display:none;
+}
+.navbar {
+		margin-bottom: 10px !important;
+}
+nav ul li{
+	margin-left: 10px;
+    margin-right: 10px;
+    color: #558cca;
+}
+.navbar-right{
+	margin-right:10px;
+}
+nav ul li a{
+	color:#141635;
+	font-weight:600;
+}
+nav button{
+	margin-top:56px !important;
+}
+nav .navbar-collapse{
+	background-color:#FFFFFF;
+}
+.mar-top-10{
+	margin-top:10px;
+}
+.phone{
+	border: 1px solid;
+    border-radius: 15px;
+    padding: 7px;
+}
+.mar-t-7{
+	margin-top:7px;
+}
+@media (max-width: 500px) {
+	nav{
+		border-left-width: 0px !important;
+		border-top-width: 0px !important;
+		border-right-width: 0px !important;
+		border-bottom-width:2px !important;
+		border-color:#558cc9 !important;
+		height:auto !important;
+	}
+	.n-toggle{
+		margin:0px 15px 0px 0px !important;
+		border:0px !important;
+		background-color:#558cc9 !important;
+		height: 70px !important;
+    	padding-top: 25px !important;
+		float:left !important;
+		border-radius:0px !important;
+	}
+	nav .navbar-header i{
+		float:right;
+		padding-top:25px;
+		padding-right:10px;
+	}
+	.eligible-section{
+	float:right;
+	padding-top:25px;
+	background-color: #ff901e;
+    height: 70px;
+    padding-left: 10px;
+    border-right-width: 10px;
+    padding-right: 10px;
+	color:#FFFFFF;
+	}
+	.eligible-section:hover{
+		color:#FFFFFF;
+	}
+	#mobile-logo{
+		display:block;
+	}
+	#destop-logo{
+		display:none;
+	}
+	.navbar{
+		margin-bottom:0px !important;
+	}
+}
