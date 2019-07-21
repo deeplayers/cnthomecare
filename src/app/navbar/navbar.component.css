@@ -51,7 +51,12 @@ nav .navbar-collapse{
 .mar-t-7{
 	margin-top:7px;
 }
+
 @media (max-width: 500px) {
+	.mobile-logo{
+		width:210px;
+		margin-top:10px;
+	}
 	nav{
 		border-left-width: 0px !important;
 		border-top-width: 0px !important;
@@ -96,4 +101,10 @@ nav .navbar-collapse{
 	.navbar{
 		margin-bottom:0px !important;
 	}
+}
+@media (max-width: 375px){
+.mobile-logo{
+	width:160px !important;
+	margin-top:15px !important;
+}
 }

@@ -4,7 +4,7 @@ Banner
 ===========================
 */
 #banner .box{
-    background-image: url('/assets/CNTHomecareFC-assets/Banner .png');
+    background-image: url("/assets/CNTHomecareFC-assets/Banner .png");
 	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
@@ -81,6 +81,7 @@ Banner
 	#mobile-eligible{
 		display:none;
 	}
+	
 @media (max-width: 500px) {
 	#banner .box .col-md-9 h1{
 		margin-top:0px;
@@ -107,13 +108,18 @@ Banner
     	border-radius: 4px;
 	}
 	#banner{
-		height:540px;
+		height:530px;
 	}
 	#destop-eligible{
 		display:none;
 	}
 	#mobile-eligible{
 		display:block;
+	}
+}
+@media (max-width: 375px){
+	#banner{
+		height:540px !important;
 	}
 }
 /*
@@ -160,7 +166,7 @@ mobile-eligible
 }
 @media (max-width: 500px) {
 #mobile-eligible .col-md-3 .box1{
-	height:530px;
+	height:500px;
 }
 #mobile-eligible .col-md-3 .box1 div button{
 	padding-left: 20px;
@@ -175,13 +181,18 @@ mobile-eligible
     padding-left: 10px;
 }
 }
+@media (max-width: 500px){
+#mobile-eligible .col-md-3 .box1{
+    height: 550px;
+}
+}
 /*
 ===========================
 section2
 ===========================
 */
 .section2-bg1{
-    background-image: url('/assets/CNTHomecareFC-assets/CareOptions.png');
+    background-image: url("/assets/CNTHomecareFC-assets/CareOptions.png");
 	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
@@ -194,7 +205,7 @@ section2
 	height:300px;
 }
 .section2-bg2{
-    background-image: url('/assets/CNTHomecareFC-assets/Provide care.png');
+    background-image: url("/assets/CNTHomecareFC-assets/Provide care.png");
 	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
@@ -222,11 +233,10 @@ section2
 }
 @media (max-width: 500px) {
 	.section2-bg1 {
-		height:325px;
+		height:340px;
 	}
-	.section2-bg2{
-		height:330px;
-		
+	.section2-bg2 {
+		height:340px;
 	}
 	#section2 .button1{
 		border-radius:4px;
@@ -255,6 +265,14 @@ section2
 	#section2 h2,#section2 h3,#section2 p{
 	text-align: left;
     font-size: 25px;
+	}
+}
+@media (max-width: 375px) {
+	.section2-bg1 {
+		height:340px !important;
+	}
+	.section2-bg2 {
+		height:360px !important;
 	}
 }
 /*
@@ -418,7 +436,7 @@ section5
 ===========================
 */
 #section5 .box{
-	background-image: url('/assets/CNTHomecareFC-assets/Why Us.png');
+	background-image: url("/assets/CNTHomecareFC-assets/Why Us.png");
 	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
@@ -440,12 +458,12 @@ section5
 }
 @media (max-width: 768px) {
 	#section5 .box{
-		height:400px !important;
+		height:750px !important;
 	}
 }
 @media (max-width: 500px) {
 	#section5 .box{
-		height:335px !important;
+		height:360px !important;
 	}
 	#section5 .box .col-md-6 h2 {
 		margin-top: 100px !important;
@@ -457,7 +475,7 @@ section5
     	font-size: 30px !important;
 	}
 	#section5{
-		height:600px;
+		height:550px;
 	}
 	#section5 .col-md-4{
 		color:#d08d42;
@@ -473,10 +491,29 @@ section5
 	#c-good-care{
 		display:block;
 	}
+	#mobile-not-show{
+	display:none;
 }
+}
+@media (max-width: 375px){
+#section5 .box {
+    height: 430px !important;
+}
+#section5 {
+    height: 670px;
+}
+#mobile-not-show{
+	display:none;
+}
+}
+
 #section5 .box .col-md-6 h2{
 	margin-top: 141px;
     margin-right: 50px;
+	font-size: 27px;
+}
+.mar-top-40{
+	margin-top:40px;
 }
 #section5 .box .col-md-6 h1{
 	margin-right: 40px;
@@ -620,6 +657,15 @@ section6
 	}
 	.carousel-indicators{
 		display:none;
+	}
+}
+@media (max-width: 500px) {
+	.mobile-margin{
+		    margin-top: 370px;
+	}
+	.padding-mobile-15 {
+    	padding-left: 5px !important;
+		padding-right:5px !important;
 	}
 }
 /*
