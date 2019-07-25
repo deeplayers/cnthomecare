@@ -6,9 +6,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { HomesComponent } from './homes/homes.component';
-import { HttpClientModule } from '@angular/common/http';
-// httpClinetModule
-// Angular's preferred way to communicate with the server side is through the HttpClientModule module.
+import { ReactiveFormsModule,  FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; // Angular's preferred way to communicate with the server side is through the HttpClientModule module.
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

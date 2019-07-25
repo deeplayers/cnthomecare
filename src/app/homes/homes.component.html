@@ -10,43 +10,59 @@
                 <p><button class="btn1">Know your ELEGIBILITY</button> <br class="banner-br"><!--------br for mobile----------->
                  &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn2">Read FAQ</button></p>
             </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="col-md-3" id="destop-eligible">
             	<div class="box1">
                 	<p><span style="font-family:Roboto-Thin; font-size:26px;">Am I eligible?</span> &nbsp;fill form to know more we'll check to see if youre eligible to apply</p>
                     <div class="col-xs-6">
                     <div class="cbox">
                     	<strong style="color:#000000;">First Name</strong>
-                        <input type="text" name="fname" id="fname" placeholder="Jhon" required>
+                        <input type="text" name="fname" id="fname" placeholder="Jhon" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required" class="alert alert-danger">First Name is required</div>
+                        </div>
                     </div>
                     </div>
                     <div class="col-xs-6">
                     <div class="cbox">
                     	<strong style="color:#000000;">Last Name</strong>
-                        <input type="text" name="lname" id="lname" placeholder="Bane" required>
+                        <input type="text" name="lname" id="lname" placeholder="Bane" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required" class="alert alert-danger">Last Name is required</div>
+                        </div>
                     </div>
                     </div>
                     <div class="row"></div>
                     <div style="padding:0px 5px 0px 5px;">
                     <div class="cbox">
                     	<strong style="color:#000000;">Phone Number</strong>
-                        <input type="number" name="pnumber" id="pnumber" placeholder="XXX-XXX-XXXX" required>
+                        <input type="pnumber"  name="pnumber" id="pnumber" placeholder="XXX-XXX-XXXX" formControlName="pnumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pnumber.errors }" />
+                        <div *ngIf="submitted && f.pnumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.pnumber.errors.required" class="alert alert-danger">Phone Number is required</div>
+                            <div *ngIf="f.pnumber.errors.minlength" class="alert alert-danger">Phone Number must be at least 10 digits</div>
+                        </div>
                     </div>
                     </div>
                     <div class="row"></div>
                     <div style="padding:0px 5px 0px 5px;">
                     <div class="cbox">
                     	<strong style="color:#000000;">Email Address</strong>
-                        <input type="email" name="emailaddress" id="emailaddress" placeholder="XXX-XXX-XXXX" required>
+                        <input type="email" name="emailaddress" id="emailaddress" placeholder="XXX-XXX-XXXX" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required" class="alert alert-danger">Email is required</div>
+                            <div *ngIf="f.email.errors.email" class="alert alert-danger">Enter valid email address</div>
+                        </div>
                     </div>
-                    </div><br>
+                    </div>
                     <p>Are you the patient?</p>
                     <p><input type="radio" name="patient">&nbsp;Yes&nbsp;&nbsp;&nbsp;<input type="radio" name="patient">&nbsp;No</p>
-                    <br>
+                
                     <p>Does the patient have Medicaid?</p>
                     <p><input type="radio" name="patientmedicaid">&nbsp;Yes&nbsp;&nbsp;&nbsp;<input type="radio" name="patientmedicaid">&nbsp;No&nbsp;&nbsp;&nbsp;<input type="radio" name="patientmedicaid">&nbsp;I don't know</p>
                     <div class="col-xs-5" style="padding:0px;"><button>Am I ELIGIBLE</button></div><div class="col-xs-7" style="padding:0px;"><p> we will contact you with further instrucations.</p></div>
                 </div>
             </div>
+        </form>
         </div>
     </section>
     <!-----------------End Banner ---------->
@@ -73,6 +89,7 @@
     </section>
     <!---------------End Section2------------------->
     <!--------------mobile eligible----------------------->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <span  id="mobile-eligible">
     <div class="col-md-3">
             	<div class="box1">
@@ -80,13 +97,19 @@
                     <div class="col-xs-6">
                     <div class="cbox">
                     	<strong style="color:#000000;">First Name</strong>
-                        <input type="text" name="fname" id="fname" placeholder="Jhon" required>
+                        <input type="text" name="fname" id="fname" placeholder="Jhon"  formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>>
                     </div>
                     </div>
                     <div class="col-xs-6">
                     <div class="cbox">
                     	<strong style="color:#000000;">Last Name</strong>
-                        <input type="text" name="lname" id="lname" placeholder="Bane" required>
+                        <input type="text" name="lname" id="lname" placeholder="Bane" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required" class="alert alert-danger">Last Name is required</div>
+                        </div>
                     </div>
                     </div>
                     <div class="row"></div>
@@ -112,6 +135,7 @@
                 </div>
             </div>
             </span>
+        </form>
     <!--------------end mobile eligible----------------------->
     <!--------------Section 3----------------------->
     <div class="row" style="margin-right:0px !important"></div>
